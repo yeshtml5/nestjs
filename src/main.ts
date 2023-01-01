@@ -16,6 +16,7 @@ async function bootstrap() {
       transform: true,
     }),
   );
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000); // Heroku 연결을 위해 process.env.PORT 추가
+  // await app.listen(3000);
 }
 bootstrap();
